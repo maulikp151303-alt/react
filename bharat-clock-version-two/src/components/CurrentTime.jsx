@@ -15,9 +15,10 @@ let CurrentTime = () => {
   }, []);
 
   return (
-    <p className="lead">
-      This is the current time: {time.toLocaleDateString()} -{" "}
-      {time.toLocaleTimeString()}
+    <p className="lead fw-bold">
+      This is the current Time : <br></br> {time.toLocaleTimeString()}
+      <br></br>This is current Date : <br></br>
+      {time.toLocaleDateString()}{" "}
     </p>
   );
 };
