@@ -1,5 +1,12 @@
 .display {
-  margin: 10px;
-  width: 175px;
-  font-size: 25px;
+  width: 100%;
+  height: 60px;
+  font-size: 1.8rem;
+  border-radius: 12px;
+  border: 2px solid #6ea8fe;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }

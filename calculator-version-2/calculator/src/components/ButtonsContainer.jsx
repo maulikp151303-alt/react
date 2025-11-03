@@ -1,34 +1,45 @@
 import styles from "./ButtonsContainer.module.css";
 
 const ButtonsContainer = ({ onButtonClick }) => {
-  const buttonNames = [
+  const buttons = [
     "C",
-    "1",
-    "2",
-    "+",
-    "3",
-    "4",
-    "-",
-    "5",
-    "6",
+    "/",
     "*",
+    "←",
     "7",
     "8",
-    "/",
-    "=",
     "9",
+    "-",
+    "4",
+    "5",
+    "6",
+    "+",
+    "1",
+    "2",
+    "3",
+    "=",
     "0",
     ".",
+    "%",
   ];
+
+  const getButtonType = (btn) => {
+    if (btn === "C") return "clear";
+    if (btn === "=") return "equals";
+    if (["/", "*", "-", "+", "%"].includes(btn)) return "operator";
+    if (btn === "←") return "backspace";
+    return "number";
+  };
 
   return (
     <div className={styles.buttonsContainer}>
-      {buttonNames.map((buttonName) => (
+      {buttons.map((btn, index) => (
         <button
-          className={styles.button}
-          onClick={() => onButtonClick(buttonName)}
+          key={index}
+          onClick={() => onButtonClick(btn)}
+          className={`${styles.button} ${styles[getButtonType(btn)]}`}
         >
-          {buttonName}
+          {btn}
         </button>
       ))}
     </div>

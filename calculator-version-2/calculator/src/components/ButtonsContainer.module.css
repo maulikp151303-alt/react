@@ -1,11 +1,57 @@
 .buttonsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
+/* Base button styling */
 .button {
-  width: 45px;
-  height: 45px;
-  margin: 3px;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+
+/* 🔢 Number buttons */
+.number {
+  background-color: #6c757d;
+}
+.number:hover {
+  background-color: #5a6268;
+}
+
+/* ➕➖✖️➗ Operator buttons */
+.operator {
+  background-color: #f0ad4e;
+}
+.operator:hover {
+  background-color: #ec971f;
+}
+
+/* 🟢 Equals button */
+.equals {
+  background-color: #007bff;
+}
+.equals:hover {
+  background-color: #0069d9;
+}
+
+/* 🔴 Clear button */
+.clear {
+  background-color: #dc3545;
+}
+.clear:hover {
+  background-color: #c82333;
+}
+
+/* ⬅️ Backspace button */
+.backspace {
+  background-color: #495057;
+}
+.backspace:hover {
+  background-color: #343a40;
 }

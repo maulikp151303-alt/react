@@ -8,20 +8,31 @@ function App() {
 
   const onButtonClick = (buttonText) => {
     if (buttonText === "C") {
+      // Clear all
       setCalVal("");
     } else if (buttonText === "=") {
-      const result = eval(calVal);
-      setCalVal(result);
+      // Evaluate expression safely
+      try {
+        const result = eval(calVal);
+        setCalVal(result.toString());
+      } catch {
+        setCalVal("Error");
+      }
+    } else if (buttonText === "←") {
+      // Remove last character
+      setCalVal(calVal.slice(0, -1));
     } else {
-      const newDisplayValue = calVal + buttonText;
-      setCalVal(newDisplayValue);
+      // Append pressed button
+      setCalVal(calVal + buttonText);
     }
   };
 
   return (
-    <div className={styles.calculator}>
-      <Display displayValue={calVal}></Display>
-      <ButtonsContainer onButtonClick={onButtonClick}></ButtonsContainer>
+    <div className={styles.appContainer}>
+      <div className={styles.calculator}>
+        <Display displayValue={calVal} />
+        <ButtonsContainer onButtonClick={onButtonClick} />
+      </div>
     </div>
   );
 }
