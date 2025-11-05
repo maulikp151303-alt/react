@@ -1,15 +1,74 @@
 .appContainer {
   height: 100vh;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #d0e7ff, #a8c0ff);
+  background: linear-gradient(135deg,#9ab8ff,#5379ff);
+  font-family: "Inter", sans-serif;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dark {
+  background: linear-gradient(135deg,#0a0f1f,#111827);
 }
 
 .calculator {
-  background-color: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
   padding: 1.5rem;
-  border-radius: 1.5rem;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.2);
+  border: 1px solid rgba(255,255,255,.4);
+  transition: 0.4s;
+  position: relative;
+}
+
+.dark .calculator {
+  background: rgba(20,20,20,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.themeSwitch {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  background: linear-gradient(90deg,#0066ff,#00d4ff);
+  color: transparent;
+  background-clip: text;
+  margin-top: 10px;
+}
+
+.dark .title {
+  background: linear-gradient(90deg,#78aaff,#eefcff);
+  color: transparent;
+  background-clip: text;
+}
+
+.historyBox {
+  width: 230px;
+  height: 330px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  padding: 1rem;
+  border-radius: 18px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.15);
+  overflow-y: auto;
+}
+
+.historyBox h3 {
+  margin-bottom: .5rem;
 }

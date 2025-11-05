@@ -1,57 +1,28 @@
 .buttonsContainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
 }
 
-/* Base button styling */
 .button {
   padding: 15px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  color: white;
+  font-size: 1.35rem;
+  border:none;
+  border-radius: 50px;
+  cursor:pointer;
+  color:#fff;
+  font-weight:600;
+  transition: transform .08s, box-shadow .15s;
+  box-shadow:0 4px 8px rgba(0,0,0,.15);
 }
 
-/* 🔢 Number buttons */
-.number {
-  background-color: #6c757d;
-}
-.number:hover {
-  background-color: #5a6268;
+.button:active {
+  transform: scale(.92);
+  box-shadow:0 2px 4px rgba(0,0,0,.2);
 }
 
-/* ➕➖✖️➗ Operator buttons */
-.operator {
-  background-color: #f0ad4e;
-}
-.operator:hover {
-  background-color: #ec971f;
-}
-
-/* 🟢 Equals button */
-.equals {
-  background-color: #007bff;
-}
-.equals:hover {
-  background-color: #0069d9;
-}
-
-/* 🔴 Clear button */
-.clear {
-  background-color: #dc3545;
-}
-.clear:hover {
-  background-color: #c82333;
-}
-
-/* ⬅️ Backspace button */
-.backspace {
-  background-color: #495057;
-}
-.backspace:hover {
-  background-color: #343a40;
-}
+.number { background: linear-gradient(135deg,#6c757d,#434b52); }
+.operator { background: linear-gradient(135deg,#f0ad4e,#d88a2b); }
+.equals { background: linear-gradient(135deg,#007bff,#005fe0); }
+.clear { background: linear-gradient(135deg,#dc3545,#a01a28); }
+.backspace { background: linear-gradient(135deg,#495057,#272b30); }
