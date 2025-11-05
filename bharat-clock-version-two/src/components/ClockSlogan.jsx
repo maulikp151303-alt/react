@@ -1,7 +1,7 @@
 let ClockSlogan = () => {
   return (
-    <p className="lead ">
-      This is the clock that shows the time in Bharat at all times.
+    <p className="lead text-secondary mt-2">
+      This clock displays live Bharat (India) time.
     </p>
   );
 };

@@ -1,0 +1,19 @@
+body {
+  background: #f5f6fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 60px;
+}
+
+center {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.time-card {
+  background: #ffffff;
+  width: 350px;
+  margin: 0 auto;
+  border-radius: 20px;
+  text-align: center;
+}
